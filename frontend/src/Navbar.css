@@ -1,0 +1,94 @@
+.navbar {
+  width: 100%;
+  padding: 18px 50px;
+  background: linear-gradient(135deg, #07111f, #0c1b2d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #18344e;
+}
+
+/* Links container */
+.navbar > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+/* Navbar links */
+.navbar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+/* Underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -7px;
+  background: #38bdf8;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+
+/* Logout button */
+
+.navbar button {
+  padding: 9px 20px;
+  border: 1px solid #38bdf8;
+  border-radius: 25px;
+  background: transparent;
+  color: #38bdf8;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navbar button:hover {
+  background: #38bdf8;
+  color: #07111f;
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar > div {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    font-size: 15px;
+  }
+
+  .navbar button {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+}
